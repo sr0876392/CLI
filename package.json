@@ -1,0 +1,26 @@
+{
+  "name": "cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "moment": "^2.22.2",
+    "lodash": "^4.17.11",
+    "moment-range": "^4.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sr0876392/CLI.git"
+  },
+  "author": "Stan Razumov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sr0876392/CLI/issues"
+  },
+  "homepage": "https://github.com/sr0876392/CLI#readme"
+}
