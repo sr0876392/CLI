@@ -18,7 +18,7 @@ _.forEach(Array.from(year.by('months')), month => {
     let monthRange = month.range('month')
     let firstDay = monthRange.start.day()
 
-    //console.log(firstDay)
+   //console.log(firstDay)
 
     //Create an array of  days in the month - use Array.from(monthRange.by('days'))
     let days= Array.from(monthRange.by('days'))
@@ -29,26 +29,29 @@ _.forEach(Array.from(year.by('months')), month => {
    
         let paddedDays = _.map(days, day => { // Transforms items in the array
         
-            let date = day.format() // TODO: Change this to output a two-digit date use day.format()
+            let date = (day.format('DD')) // TODO: Change this to output a two-digit date use day.format()
             
-            // TODO: Highlight September 10th in color         
+            // TODO: Highlight September 10th in color  
+            if(day.month() == 8 && day.date() == 10) {
+                date = chalk.bgGreen(date)
+                
+            }//my birthday       
             // TODO: Highlight YOUR birthday in color!
-                if(day.month() == 0 && day.date() == 19) {
-                    date = chalk.bgRed(date)
-                    
-                }//my birthday
+            if(day.month() == 0 && day.date() == 19) {
+                date = chalk.bgRed(date)
                 
-                
-
+            }
                 return _.padEnd(date, 2)  
         })
     
         
             //TODO: create a for() loopthat loops through month.day()
-            {
+             for (var i = 0; month.day() > i; i++){
+                 paddedDays.unshift('  ')
+             }
                 //TODO: Append blank spaces (using paddedDays.unshift('  ')) so that the 1st ends up under the right day column 
-            }
             
+                
                 
                           
            
@@ -61,12 +64,12 @@ _.forEach(Array.from(year.by('months')), month => {
             
                 // TODO: Join the days together to form one string representing the week
                 // TODO: console.log it use week.join('  ')
-                console.log()
+                console.log(week.join('  '))
             })
         
         console.log('') // Puts a blank line between each month
- 
+        
+
     })
-    
 
     
